@@ -27,3 +27,10 @@ dog = {
   };
   
   dog.sayLegs();
+
+  //created constructor for Dog class
+  function Dog() {
+    this.name = "Holly",
+    this.color = "Yellow",
+    this.numLegs = 4
+  }
