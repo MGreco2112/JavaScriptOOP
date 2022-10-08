@@ -34,3 +34,7 @@ dog = {
     this.color = "Yellow",
     this.numLegs = 4
   }
+
+  //constructed Dog object
+
+  let hound = new Dog();
