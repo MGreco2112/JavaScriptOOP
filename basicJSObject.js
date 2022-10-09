@@ -38,3 +38,13 @@ dog = {
   //constructed Dog object
 
   let hound = new Dog();
+
+  // created new constructor that takes arguments to assign values to instantiated object
+
+  function Dog(name, color) {
+    this.name = name,
+    this.color = color,
+    this.numLegs = 4
+  }
+  
+  let terrier = new Dog("Holky", "Black");
