@@ -127,3 +127,20 @@ dog = {
       return false;
     }
   }
+
+  //modified elements of the Dog.prototype in bulk by redefining the prototype
+
+  function Dog(name) {
+    this.name = name;
+  }
+  
+  Dog.prototype = {
+    // Only change code below this line
+    numLegs : 4,
+    eat: function() {
+      console.log("*scarf scarf burp*");
+    },
+    describe: function() {
+      console.log(`My name is ${this.name}`)
+    }
+  };
