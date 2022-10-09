@@ -47,6 +47,9 @@ dog = {
     this.numLegs = 4
   }
 
+  let terrier = new Dog("Holky", "Black");
+
+
   //demonstrated the functionality of the instanceof keyword in JavaScript
 
   function House(numBedrooms) {
@@ -59,6 +62,20 @@ dog = {
   
   myHouse instanceof House;
 
+
+  //utilized the .hasOwnProperty method to add the properties to the ownProps array
+  function Bird(name) {
+    this.name = name;
+    this.numLegs = 2;
+  }
   
+  let canary = new Bird("Tweety");
+  let ownProps = [];
+  // Only change code below this line
   
-  let terrier = new Dog("Holky", "Black");
+  for (let property in canary) {
+    if (canary.hasOwnProperty(property)) {
+      ownProps.push(property);
+    }
+  }
+  
