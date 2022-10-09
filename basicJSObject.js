@@ -79,3 +79,15 @@ dog = {
     }
   }
   
+  //utilized the Object.prototype field to give all Objects of that type a default value
+
+  function Dog(name) {
+    this.name = name;
+  }
+  
+  Dog.prototype.numLegs = 4;
+  
+  // Only change code above this line
+  let beagle = new Dog("Snoopy");
+
+  
