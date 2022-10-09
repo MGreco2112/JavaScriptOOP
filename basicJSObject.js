@@ -46,5 +46,19 @@ dog = {
     this.color = color,
     this.numLegs = 4
   }
+
+  //demonstrated the functionality of the instanceof keyword in JavaScript
+
+  function House(numBedrooms) {
+    this.numBedrooms = numBedrooms;
+  }
+  
+  // Only change code below this line
+  
+  let myHouse = new House(3);
+  
+  myHouse instanceof House;
+
+  
   
   let terrier = new Dog("Holky", "Black");
