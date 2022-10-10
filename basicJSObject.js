@@ -206,4 +206,26 @@ Animal.prototype = {
 let duck = Object.create(Animal.prototype); // Change this line
 let moose = Object.create(Animal.prototype); // Change this line
 
+//Setting the prototype of one Object to the prototype of another Object is a fast way to inherit properties ffrom a Supertype
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+function Dog() { }
+
+// Only change code below this line
+
+Dog.prototype = Object.create(Animal.prototype);
+
+
+let pupus = new Dog();
+
+
+
 
