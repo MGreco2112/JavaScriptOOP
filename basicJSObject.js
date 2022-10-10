@@ -308,3 +308,14 @@ const glideMixin = function(obj) {
 
 glideMixin(bird);
 glideMixin(boat);
+
+//learned how to set Object fields to Private in JS
+
+function Bird() {
+  let weight = 15;
+
+  this.getWeight = function() {
+    return weight;
+  }
+
+}
