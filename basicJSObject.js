@@ -319,3 +319,19 @@ function Bird() {
   }
 
 }
+
+//immediately invoked function expression demonstration
+
+//before
+
+// function makeNest() {
+//   console.log("A cozy nest is ready");
+// }
+
+// makeNest();
+
+//after
+
+(function() {
+  console.log("A cozy nest is ready")
+})();
