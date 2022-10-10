@@ -171,9 +171,22 @@ dog = {
   }
   
   let pupper = new Dog("Snoopy");
+
+  //Using Object.prototype.isPrototypeOf(constructor.prototype) to compare Supertype Object to subtype Object
   
   // Only change code below this line
   
-  Dog.prototype.isPrototypeOf(pupper);
+  // Dog.prototype.isPrototypeOf(pupper);
 
+  // function Dog(name) {
+  //   this.name = name;
+  // }
   
+  // let beagle = new Dog("Snoopy");
+  
+  // Dog.prototype.isPrototypeOf(beagle);  // yields true
+  
+  // // Fix the code below so that it evaluates to true
+  // Object.prototype.isPrototypeOf(Dog.prototype);
+
+
