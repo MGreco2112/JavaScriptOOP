@@ -243,6 +243,25 @@ Dog.prototype.constructor = Dog;
 duck = new Bird();
 beagle = new Dog();
 
+//Modifying a prototype with new methods after the Supertype has been created as the subtype prototype
 
+function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
+function Dog() { }
+
+// Only change code below this line
+
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+
+Dog.prototype.bark = function() {
+  console.log("Woof!")
+}
+
+
+// Only change code above this line
+
+beagle = new Dog();
 
 
