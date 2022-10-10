@@ -226,6 +226,23 @@ Dog.prototype = Object.create(Animal.prototype);
 
 let pupus = new Dog();
 
+//When modifying the prototype to another Supertype, it is important to modify the prototype.constructor field to still reflect the Object being created
+
+function Animal() { }
+function Bird() { }
+function Dog() { }
+
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
+
+// Only change code below this line
+
+Bird.prototype.constructor = Bird;
+Dog.prototype.constructor = Dog;
+
+duck = new Bird();
+beagle = new Dog();
+
 
 
 
