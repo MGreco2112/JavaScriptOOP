@@ -190,3 +190,20 @@ dog = {
   // Object.prototype.isPrototypeOf(Dog.prototype);
 
 
+//inheritance is used in JS through the Object.create(Constructor.prototype) method
+
+  function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+// Only change code below this line
+
+let duck = Object.create(Animal.prototype); // Change this line
+let moose = Object.create(Animal.prototype); // Change this line
+
+
