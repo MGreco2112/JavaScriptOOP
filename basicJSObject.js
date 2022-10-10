@@ -335,3 +335,31 @@ function Bird() {
 (function() {
   console.log("A cozy nest is ready")
 })();
+
+//using immediately invoked function expression to create a JS module
+
+// let isCuteMixin = function(obj) {
+//   obj.isCute = function() {
+//     return true;
+//   };
+// };
+// let singMixin = function(obj) {
+//   obj.sing = function() {
+//     console.log("Singing to an awesome tune");
+//   };
+// };
+
+let funModule = (function() {
+  return {
+    isCuteMixin: function(obj) {
+      obj.isCute = function() {
+        return true;
+      };
+    },
+    singMixin: function(obj) {
+      obj.sing = function() {
+        console.log("Singing to an awesome tune");
+      };
+    }
+  }
+})();
