@@ -285,3 +285,26 @@ Penguin.prototype.fly = function() {
 
 let penguin = new Penguin();
 console.log(penguin.fly());
+
+//utilized a Mixin function to give multiple Objects the same field without inheritance
+
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+// Only change code below this line
+
+const glideMixin = function(obj) {
+  obj.glide = function() {
+    console.log("ssssshhhhhhhh");
+  }
+}
+
+glideMixin(bird);
+glideMixin(boat);
