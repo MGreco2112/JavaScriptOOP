@@ -164,4 +164,16 @@ dog = {
     }
   };
 
+  //Utilizing the Object.prototype.isPrototypeOf(instance) to identify the parent Object of the instance
+
+  function Dog(name) {
+    this.name = name;
+  }
+  
+  let pupper = new Dog("Snoopy");
+  
+  // Only change code below this line
+  
+  Dog.prototype.isPrototypeOf(pupper);
+
   
